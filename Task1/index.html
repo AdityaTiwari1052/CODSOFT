@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">My <span>Portfolio</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ALEXANDER SCOTTISH</h1>
+            <p>
+                Hi, I'm a Professional Developer with 5 years of experience in IT, creating dynamic applications, websites, and mobile solutions.
+            </p>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+        <div class="hero-image">
+            <img src="./profile.jpg" alt="Profile Image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="./profile.jpg" alt="About Image">
+        </div>
+        <div class="about-content">
+            <h2>ABOUT ME</h2>
+            <p>
+                I specialize in building high-quality, user-friendly, and responsive applications. My goal is to create modern and scalable solutions that deliver real value.
+            </p>
+            <p>
+                With expertise in front-end and back-end development, I work with cutting-edge technologies and deliver products that meet industry standards.
+            </p>
+            <a href="#" class="btn">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>My Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <h3>Web Development</h3>
+                <p>Creating modern and responsive websites using HTML, CSS, JS, and frameworks.</p>
+            </div>
+            <div class="service-box">
+                <h3>Mobile Apps</h3>
+                <p>Building fast, lightweight, and interactive mobile applications for Android & iOS.</p>
+            </div>
+            <div class="service-box">
+                <h3>UI/UX Design</h3>
+                <p>Designing beautiful, user-friendly interfaces for websites and mobile apps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-bar">
+            <p>HTML & CSS</p>
+            <div class="progress"><span style="width: 90%;"></span></div>
+        </div>
+        <div class="skill-bar">
+            <p>JavaScript</p>
+            <div class="progress"><span style="width: 80%;"></span></div>
+        </div>
+        <div class="skill-bar">
+            <p>React & Node.js</p>
+            <div class="progress"><span style="width: 70%;"></span></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="works" class="works">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="./portfolio.png" alt="Project 1">
+                <h3>Portfolio Website</h3>
+            </div>
+            <div class="project-card">
+                <img src="./quiz.png" alt="Project 2">
+                <h3>Quiz app</h3>
+            </div>
+            <div class="project-card">
+                <img src="./calculator.png" alt="Project 3">
+                <h3>calculator</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Portfolio | Designed by Alexander</p>
+    </footer>
+
+    <script>
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
